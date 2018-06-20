@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Product{
+    constructor(name,model,price,color) {
+   this.name = name;
+   this.model = model;
+   this.price = price;
+   this.color=color;
+    }
+}
+
+var products = [];
+
+let pd2 = new Product("Samsung G12","Samsung",156,"red");
+let pd1 = new Product("Acer KP102","Acer",56,"red");
+let pd3 = new Product("HP 124","HP",563,"red");
+let pd4 = new Product("Dell QW343","Dell",256,"red");
+
+products.push(pd1,pd2,pd3,pd4);
+
+
+
+function visualize() {
+    let bigdiv = document.createElement("div");
+    bigdiv.style.border="2px solid black";
+    bigdiv.style.height = "380px";
+    bigdiv.style.width = "500px";
+    bigdiv.style.display = "flex";
+    bigdiv.style.flexDirection = "column";
+    bigdiv.style.flexWrap = "wrap";
+
+   for(let k of products) {
+       
+     let div =  document.createElement("div");
+     div.style.border="2px solid blue";
+     div.style.width = "200px";
+     div.style.height = "180px";
+     let pName = document.createElement("p");
+     pName.innerText=k.name;
+
+     let pModel = document.createElement("p");
+     pModel.innerText = k.model;
+
+     let pPrice = document.createElement("p");
+     pPrice.innerText = k.price;
+
+     let pColor = document.createElement("p");
+     pColor.innerText = k.color;
+     
+     document.body.appendChild(bigdiv);
+     bigdiv.appendChild(div);
+      div.appendChild(pName);
+      div.appendChild(pModel);
+      div.appendChild(pPrice);
+      div.appendChild(pColor);
+
+   }
+}
+
+visualize();
+             
+       </script>
+
+    <script src = "js/script.js"></script>
+</body>
+</html> 

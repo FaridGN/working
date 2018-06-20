@@ -1,0 +1,22 @@
+body{
+    margin: 0px auto;
+}
+/* .flexcont{
+    display: flex;
+    flex-direction: column;
+} */
+#name{
+    margin: 5px 10px;
+}
+#email{
+    margin: 5px 10px;
+}
+#password{
+    margin: 5px 10px;
+}
+#repassword{
+    margin: 5px 10px;
+}
+#hor{
+    margin-left: 0px;
+}
